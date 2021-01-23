@@ -18,6 +18,15 @@ class ViewController: UIViewController {
             applySnapshot()
         }
     }
+
+    private lazy var searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.autocapitalizationType = .none
+
+        return searchController
+    }()
 }
 
 // MARK: - View Lifecycle
@@ -27,7 +36,17 @@ extension ViewController {
         super.viewDidLoad()
 
         createLayout()
+        initialiseNavigationBar()
         applySnapshot()
+    }
+}
+
+// MARK: - UI Initialisation
+extension ViewController {
+
+    private func initialiseNavigationBar() {
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
 }
 
@@ -67,5 +86,28 @@ extension ViewController {
         snapshot.appendItems(sfSymbolNames, toSection: .all)
 
         dataSource.apply(snapshot, animatingDifferences: false)
+    }
+}
+
+// MARK: - UISearchResultsUpdating
+extension ViewController: UISearchResultsUpdating {
+
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text else { return }
+
+        // Strip leading/trailing whitespace from `searchText`
+        let spaceStrippedSearchText = searchText.trimmingCharacters(in: .whitespaces)
+
+        // Show all the symbols when `spaceStrippedSearchText` is empty
+        guard !spaceStrippedSearchText.isEmpty else {
+            sfSymbolNames = SFSymbolNames.all
+            return
+        }
+
+        // Naïve search algorithm using a simple substring test
+        sfSymbolNames = SFSymbolNames.all
+            .filter { sfSymbolName in
+                sfSymbolName.value.contains(spaceStrippedSearchText)
+            }
     }
 }
