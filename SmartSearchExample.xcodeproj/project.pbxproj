@@ -13,8 +13,8 @@
 		6C4811F225BC6F3E00762A62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4811F025BC6F3E00762A62 /* Main.storyboard */; };
 		6C4811F425BC6F3F00762A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C4811F325BC6F3F00762A62 /* Assets.xcassets */; };
 		6C4811F725BC6F3F00762A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4811F525BC6F3F00762A62 /* LaunchScreen.storyboard */; };
-		6C48120225BC6F4000762A62 /* SmartSearchExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C48120125BC6F4000762A62 /* SmartSearchExampleTests.swift */; };
-		6C48120D25BC6F4000762A62 /* SmartSearchExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C48120C25BC6F4000762A62 /* SmartSearchExampleUITests.swift */; };
+		6CAA422F25BC9289001537B0 /* SmartSearchMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA422E25BC9289001537B0 /* SmartSearchMatcher.swift */; };
+		6CAA423425BC9B29001537B0 /* SmartSearchMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA423325BC9B29001537B0 /* SmartSearchMatcherTests.swift */; };
 		6CC1314325BC8242008D0AFF /* SFSymbolNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC1314125BC8242008D0AFF /* SFSymbolNames.swift */; };
 		6CC1314425BC8242008D0AFF /* SFSymbols.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6CC1314225BC8242008D0AFF /* SFSymbols.txt */; };
 		6CC1314C25BC8575008D0AFF /* SFSymbolName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC1314B25BC8575008D0AFF /* SFSymbolName.swift */; };
@@ -22,13 +22,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		6C4811FE25BC6F4000762A62 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C4811DF25BC6F3E00762A62 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6C4811E625BC6F3E00762A62;
-			remoteInfo = SmartSearchExample;
-		};
-		6C48120925BC6F4000762A62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C4811DF25BC6F3E00762A62 /* Project object */;
 			proxyType = 1;
@@ -47,11 +40,9 @@
 		6C4811F625BC6F3F00762A62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C4811F825BC6F3F00762A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C4811FD25BC6F3F00762A62 /* SmartSearchExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartSearchExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C48120125BC6F4000762A62 /* SmartSearchExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSearchExampleTests.swift; sourceTree = "<group>"; };
 		6C48120325BC6F4000762A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6C48120825BC6F4000762A62 /* SmartSearchExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartSearchExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C48120C25BC6F4000762A62 /* SmartSearchExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSearchExampleUITests.swift; sourceTree = "<group>"; };
-		6C48120E25BC6F4000762A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CAA422E25BC9289001537B0 /* SmartSearchMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSearchMatcher.swift; sourceTree = "<group>"; };
+		6CAA423325BC9B29001537B0 /* SmartSearchMatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSearchMatcherTests.swift; sourceTree = "<group>"; };
 		6CC1314125BC8242008D0AFF /* SFSymbolNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSymbolNames.swift; sourceTree = "<group>"; };
 		6CC1314225BC8242008D0AFF /* SFSymbols.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SFSymbols.txt; sourceTree = "<group>"; };
 		6CC1314B25BC8575008D0AFF /* SFSymbolName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolName.swift; sourceTree = "<group>"; };
@@ -72,13 +63,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C48120525BC6F4000762A62 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,7 +71,6 @@
 			children = (
 				6C4811E925BC6F3E00762A62 /* SmartSearchExample */,
 				6C48120025BC6F4000762A62 /* SmartSearchExampleTests */,
-				6C48120B25BC6F4000762A62 /* SmartSearchExampleUITests */,
 				6C4811E825BC6F3E00762A62 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,7 +80,6 @@
 			children = (
 				6C4811E725BC6F3E00762A62 /* SmartSearchExample.app */,
 				6C4811FD25BC6F3F00762A62 /* SmartSearchExampleTests.xctest */,
-				6C48120825BC6F4000762A62 /* SmartSearchExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +92,7 @@
 				6CC1314B25BC8575008D0AFF /* SFSymbolName.swift */,
 				6CC1314125BC8242008D0AFF /* SFSymbolNames.swift */,
 				6CC1314225BC8242008D0AFF /* SFSymbols.txt */,
+				6CAA422E25BC9289001537B0 /* SmartSearchMatcher.swift */,
 				6C4811EE25BC6F3E00762A62 /* ViewController.swift */,
 				6C4811F025BC6F3E00762A62 /* Main.storyboard */,
 				6C4811F325BC6F3F00762A62 /* Assets.xcassets */,
@@ -122,19 +105,10 @@
 		6C48120025BC6F4000762A62 /* SmartSearchExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				6C48120125BC6F4000762A62 /* SmartSearchExampleTests.swift */,
+				6CAA423325BC9B29001537B0 /* SmartSearchMatcherTests.swift */,
 				6C48120325BC6F4000762A62 /* Info.plist */,
 			);
 			path = SmartSearchExampleTests;
-			sourceTree = "<group>";
-		};
-		6C48120B25BC6F4000762A62 /* SmartSearchExampleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6C48120C25BC6F4000762A62 /* SmartSearchExampleUITests.swift */,
-				6C48120E25BC6F4000762A62 /* Info.plist */,
-			);
-			path = SmartSearchExampleUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,24 +149,6 @@
 			productReference = 6C4811FD25BC6F3F00762A62 /* SmartSearchExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6C48120725BC6F4000762A62 /* SmartSearchExampleUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6C48121725BC6F4000762A62 /* Build configuration list for PBXNativeTarget "SmartSearchExampleUITests" */;
-			buildPhases = (
-				6C48120425BC6F4000762A62 /* Sources */,
-				6C48120525BC6F4000762A62 /* Frameworks */,
-				6C48120625BC6F4000762A62 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6C48120A25BC6F4000762A62 /* PBXTargetDependency */,
-			);
-			name = SmartSearchExampleUITests;
-			productName = SmartSearchExampleUITests;
-			productReference = 6C48120825BC6F4000762A62 /* SmartSearchExampleUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -206,10 +162,6 @@
 						CreatedOnToolsVersion = 12.3;
 					};
 					6C4811FC25BC6F3F00762A62 = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 6C4811E625BC6F3E00762A62;
-					};
-					6C48120725BC6F4000762A62 = {
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = 6C4811E625BC6F3E00762A62;
 					};
@@ -230,7 +182,6 @@
 			targets = (
 				6C4811E625BC6F3E00762A62 /* SmartSearchExample */,
 				6C4811FC25BC6F3F00762A62 /* SmartSearchExampleTests */,
-				6C48120725BC6F4000762A62 /* SmartSearchExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -254,13 +205,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C48120625BC6F4000762A62 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -268,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CAA422F25BC9289001537B0 /* SmartSearchMatcher.swift in Sources */,
 				6CC1314325BC8242008D0AFF /* SFSymbolNames.swift in Sources */,
 				6C4811EF25BC6F3E00762A62 /* ViewController.swift in Sources */,
 				6C4811EB25BC6F3E00762A62 /* AppDelegate.swift in Sources */,
@@ -280,15 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C48120225BC6F4000762A62 /* SmartSearchExampleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6C48120425BC6F4000762A62 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6C48120D25BC6F4000762A62 /* SmartSearchExampleUITests.swift in Sources */,
+				6CAA423425BC9B29001537B0 /* SmartSearchMatcherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,11 +236,6 @@
 			isa = PBXTargetDependency;
 			target = 6C4811E625BC6F3E00762A62 /* SmartSearchExample */;
 			targetProxy = 6C4811FE25BC6F4000762A62 /* PBXContainerItemProxy */;
-		};
-		6C48120A25BC6F4000762A62 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6C4811E625BC6F3E00762A62 /* SmartSearchExample */;
-			targetProxy = 6C48120925BC6F4000762A62 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -525,46 +457,6 @@
 			};
 			name = Release;
 		};
-		6C48121825BC6F4000762A62 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = SmartSearchExampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hacknicity.SmartSearchExampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SmartSearchExample;
-			};
-			name = Debug;
-		};
-		6C48121925BC6F4000762A62 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = SmartSearchExampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hacknicity.SmartSearchExampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SmartSearchExample;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -591,15 +483,6 @@
 			buildConfigurations = (
 				6C48121525BC6F4000762A62 /* Debug */,
 				6C48121625BC6F4000762A62 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6C48121725BC6F4000762A62 /* Build configuration list for PBXNativeTarget "SmartSearchExampleUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6C48121825BC6F4000762A62 /* Debug */,
-				6C48121925BC6F4000762A62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

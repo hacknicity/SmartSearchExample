@@ -104,10 +104,31 @@ extension ViewController: UISearchResultsUpdating {
             return
         }
 
-        // Naïve search algorithm using a simple substring test
+        // Filter all symbol names using a smart matching algorithm based on token prefixes
+        let smartSearchMatcher = SmartSearchMatcher(searchString: spaceStrippedSearchText)
+
         sfSymbolNames = SFSymbolNames.all
             .filter { sfSymbolName in
-                sfSymbolName.value.contains(spaceStrippedSearchText)
+                // If the search text only has one token then we try to match the full symbol name.
+                //
+                // This is a degenerate case where both the search text and the symbol name have a single token.
+                // It allows matching whole symbol name prefixes when the search text contains periods.
+                //
+                // For eaxmple, searching for "square." will match all symbol names beginning with "square." but
+                // won't match any symbol names which contain "square." within the name.
+                if smartSearchMatcher.searchTokens.count == 1 && smartSearchMatcher.matches(sfSymbolName.value) {
+                    return true
+                }
+
+                // Break the symbol name into tokens by replacing periods with spaces and try to match that.
+                //
+                // This treats the individual components of the symbol name as separate tokens and requires a
+                // prefix match against each of the tokens in `spaceStrippedSearchString`.
+                //
+                // For example, searching for "fi dr" will match "cloud.drizzle.fill", "drop.fill",
+                // "drop.triangle.fill", and "hand.draw.fill".
+                let sfSymbolNameWithSpaces = sfSymbolName.value.replacingOccurrences(of: ".", with: " ")
+                return smartSearchMatcher.matches(sfSymbolNameWithSpaces)
             }
     }
 }
