@@ -15,6 +15,9 @@
 		6C4811F725BC6F3F00762A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4811F525BC6F3F00762A62 /* LaunchScreen.storyboard */; };
 		6C48120225BC6F4000762A62 /* SmartSearchExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C48120125BC6F4000762A62 /* SmartSearchExampleTests.swift */; };
 		6C48120D25BC6F4000762A62 /* SmartSearchExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C48120C25BC6F4000762A62 /* SmartSearchExampleUITests.swift */; };
+		6CC1314325BC8242008D0AFF /* SFSymbolNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC1314125BC8242008D0AFF /* SFSymbolNames.swift */; };
+		6CC1314425BC8242008D0AFF /* SFSymbols.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6CC1314225BC8242008D0AFF /* SFSymbols.txt */; };
+		6CC1314C25BC8575008D0AFF /* SFSymbolName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC1314B25BC8575008D0AFF /* SFSymbolName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		6C48120825BC6F4000762A62 /* SmartSearchExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartSearchExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C48120C25BC6F4000762A62 /* SmartSearchExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSearchExampleUITests.swift; sourceTree = "<group>"; };
 		6C48120E25BC6F4000762A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CC1314125BC8242008D0AFF /* SFSymbolNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSymbolNames.swift; sourceTree = "<group>"; };
+		6CC1314225BC8242008D0AFF /* SFSymbols.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SFSymbols.txt; sourceTree = "<group>"; };
+		6CC1314B25BC8575008D0AFF /* SFSymbolName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,9 @@
 			children = (
 				6C4811EA25BC6F3E00762A62 /* AppDelegate.swift */,
 				6C4811EC25BC6F3E00762A62 /* SceneDelegate.swift */,
+				6CC1314B25BC8575008D0AFF /* SFSymbolName.swift */,
+				6CC1314125BC8242008D0AFF /* SFSymbolNames.swift */,
+				6CC1314225BC8242008D0AFF /* SFSymbols.txt */,
 				6C4811EE25BC6F3E00762A62 /* ViewController.swift */,
 				6C4811F025BC6F3E00762A62 /* Main.storyboard */,
 				6C4811F325BC6F3F00762A62 /* Assets.xcassets */,
@@ -232,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C4811F725BC6F3F00762A62 /* LaunchScreen.storyboard in Resources */,
+				6CC1314425BC8242008D0AFF /* SFSymbols.txt in Resources */,
 				6C4811F425BC6F3F00762A62 /* Assets.xcassets in Resources */,
 				6C4811F225BC6F3E00762A62 /* Main.storyboard in Resources */,
 			);
@@ -258,9 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CC1314325BC8242008D0AFF /* SFSymbolNames.swift in Sources */,
 				6C4811EF25BC6F3E00762A62 /* ViewController.swift in Sources */,
 				6C4811EB25BC6F3E00762A62 /* AppDelegate.swift in Sources */,
 				6C4811ED25BC6F3E00762A62 /* SceneDelegate.swift in Sources */,
+				6CC1314C25BC8575008D0AFF /* SFSymbolName.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
