@@ -61,6 +61,7 @@ extension ViewController {
         let configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         collectionView.collectionViewLayout = UICollectionViewCompositionalLayout.list(using: configuration)
         collectionView.dataSource = dataSource
+        collectionView.allowsSelection = false
     }
 
     private func makeDataSource() -> UICollectionViewDiffableDataSource<Section, SFSymbolName> {
@@ -109,10 +110,7 @@ extension ViewController: UISearchResultsUpdating {
 
         sfSymbolNames = SFSymbolNames.all
             .filter { sfSymbolName in
-                // If the search text only has one token then we try to match the full symbol name.
-                //
-                // This is a degenerate case where both the search text and the symbol name have a single token.
-                // It allows matching whole symbol name prefixes when the search text contains periods.
+                // If the search text only has one token then we try to match a prefix of the full symbol name.
                 //
                 // For eaxmple, searching for "square." will match all symbol names beginning with "square." but
                 // won't match any symbol names which contain "square." within the name.
