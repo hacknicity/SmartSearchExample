@@ -23,6 +23,6 @@ final class SFSymbolNames {
         return string
             .split(separator: "\n")
             .sorted()
-            .map { SFSymbolName(value: String($0)) }
+            .map { SFSymbolName(rawValue: String($0)) }
     }()
 }

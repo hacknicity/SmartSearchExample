@@ -10,6 +10,6 @@ import Foundation
 /// SF Symbol name.
 ///
 /// Simple type safe wrapper around `String`.
-struct SFSymbolName: Hashable {
-    var value: String
+struct SFSymbolName: RawRepresentable, Hashable {
+    var rawValue: String
 }

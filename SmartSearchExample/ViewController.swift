@@ -68,10 +68,10 @@ extension ViewController {
         let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, SFSymbolName> { cell, _, sfSymbolName in
             var content = cell.defaultContentConfiguration()
 
-            content.image = UIImage(systemName: sfSymbolName.value)
+            content.image = UIImage(systemName: sfSymbolName.rawValue)
             content.imageProperties.tintColor = .label
 
-            content.text = sfSymbolName.value
+            content.text = sfSymbolName.rawValue
 
             cell.contentConfiguration = content
         }
@@ -114,7 +114,7 @@ extension ViewController: UISearchResultsUpdating {
                 //
                 // For eaxmple, searching for "square." will match all symbol names beginning with "square." but
                 // won't match any symbol names which contain "square." within the name.
-                if smartSearchMatcher.searchTokens.count == 1 && smartSearchMatcher.matches(sfSymbolName.value) {
+                if smartSearchMatcher.searchTokens.count == 1 && smartSearchMatcher.matches(sfSymbolName.rawValue) {
                     return true
                 }
 
@@ -125,7 +125,7 @@ extension ViewController: UISearchResultsUpdating {
                 //
                 // For example, searching for "fi dr" will match "cloud.drizzle.fill", "drop.fill",
                 // "drop.triangle.fill", and "hand.draw.fill".
-                let sfSymbolNameWithSpaces = sfSymbolName.value.replacingOccurrences(of: ".", with: " ")
+                let sfSymbolNameWithSpaces = sfSymbolName.rawValue.replacingOccurrences(of: ".", with: " ")
                 return smartSearchMatcher.matches(sfSymbolNameWithSpaces)
             }
     }
