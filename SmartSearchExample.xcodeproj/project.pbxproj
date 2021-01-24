@@ -43,6 +43,9 @@
 		6C48120325BC6F4000762A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CAA422E25BC9289001537B0 /* SmartSearchMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSearchMatcher.swift; sourceTree = "<group>"; };
 		6CAA423325BC9B29001537B0 /* SmartSearchMatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSearchMatcherTests.swift; sourceTree = "<group>"; };
+		6CAA425625BDC71D001537B0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		6CAA425725BDC71D001537B0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6CAA425E25BDCBD9001537B0 /* Screenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshots.png; sourceTree = "<group>"; };
 		6CC1314125BC8242008D0AFF /* SFSymbolNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSymbolNames.swift; sourceTree = "<group>"; };
 		6CC1314225BC8242008D0AFF /* SFSymbols.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SFSymbols.txt; sourceTree = "<group>"; };
 		6CC1314B25BC8575008D0AFF /* SFSymbolName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolName.swift; sourceTree = "<group>"; };
@@ -69,6 +72,9 @@
 		6C4811DE25BC6F3E00762A62 = {
 			isa = PBXGroup;
 			children = (
+				6CAA425725BDC71D001537B0 /* README.md */,
+				6CAA425625BDC71D001537B0 /* LICENSE */,
+				6CAA425E25BDCBD9001537B0 /* Screenshots.png */,
 				6C4811E925BC6F3E00762A62 /* SmartSearchExample */,
 				6C48120025BC6F4000762A62 /* SmartSearchExampleTests */,
 				6C4811E825BC6F3E00762A62 /* Products */,
