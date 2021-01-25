@@ -62,7 +62,7 @@ struct SmartSearchMatcher {
                     // "Bill Bailey" but not "Barry Took"
                     candidateStringTokens.remove(at: candidateStringTokenIndex)
 
-                    // Check the next candidate string token
+                    // Check the next search string token
                     break
                 }
             }
